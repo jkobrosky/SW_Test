@@ -24,6 +24,8 @@ var app = express();
   // Routes for TestController
   app.get('/api/test/', TestController.createTest);
   app.post('/api/test/', TestController.postTest);
+  app.put('/api/test/', TestController.updateTest);
+  app.delete('/api/test/', TestController.deleteTest);
 
   mongoose.connect(mongoUri);
   mongoose.connection.once('open', function() {

@@ -11,7 +11,7 @@ module.exports = {
       } else {
         return res.json(result);
       }
-    })
+    });
     //return res.json("Good get");
   },
 
@@ -24,8 +24,29 @@ module.exports = {
       } else {
         return res.json(result);
       }
-    })
+    });
     //return res.json('Good post')
+  },
+
+  updateTest: function(req, res) {
+    TestModel.findOneAndUpdate({ "name": req.body.name }, { "name": req.body.newName }, function(err, result) {
+      if (err) {
+        res.status(500).json(err);
+      } else {
+        res.json(result);
+      }
+    })
+  },
+
+  deleteTest: function(req, res) {
+    console.log(req.body.name);
+    TestModel.findOneAndRemove({ "name": req.body.name }, function(err, result) {
+      if (err) {
+        res.status(500).json(err);
+      } else {
+        res.json(result);
+      }
+    });
   }
 
 }
