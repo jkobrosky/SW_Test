@@ -4,7 +4,12 @@ angular.module('sw_test', ['ngRoute'])
   $routeProvider
   .when('/', {
     templateUrl: './views/home.html',
-    controller: 'HomeController'
+    controller: 'HomeController',
+    resolve: {
+      allUsers: function($http) {
+        return $http.get('/api/test/');
+      }
+    }
   })
 
   .otherwise({

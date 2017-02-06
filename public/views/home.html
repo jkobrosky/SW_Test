@@ -23,10 +23,23 @@
   </div> <!-- End of 'col-md-5' -->
 </div> <!-- End of 'container' -->
 
-<div class="container">
-  <div class="col-md-8">
+<div class="container my-table">
+  <div class="col-md-8 col-md-offset-2">
     <table class="table table-hover">
-      <!-- Table data will go here -->
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Full Name</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="(key, user) in users">
+          <th scope="row">{{ key + 1 }}</th>
+          <td>{{ user.name }}</td>
+          <td>{{ user.email }}</td>
+        </tr>
+      </tbody>
     </table>
   </div> <!-- End of 'col-md-5' -->
 </div><!-- End of 'container' -->
