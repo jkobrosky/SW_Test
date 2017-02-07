@@ -24,6 +24,7 @@
     "mongodb": "~2.2.22"
   },
   "devDependencies": {
+    "gradle": "^0.1.0",
     "grunt-contrib-less": "~1.4.0",
     "grunt-contrib-watch": "~1.0.0",
     "less": "~2.7.2"
