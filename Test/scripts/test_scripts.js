@@ -20,3 +20,5 @@ var driver = new webdriver.Builder()
     driver.findElement(By.id('exampleInputName1')).sendKeys("Test Name");
     driver.findElement(By.id('exampleInputEmail1')).sendKeys("testName@ftc-llc.com");
     var button = driver.findElement(By.id('submitButton')).click();
+
+    console.log("Testing scripts");
