@@ -21,12 +21,15 @@
     "express": "~4.14.1",
     "mongoose": "~4.8.1",
     "cors": "~2.8.1",
-    "mongodb": "~2.2.22"
+    "mongodb": "~2.2.22",
+    "selenium-webdriver": "^3.0.1"
   },
   "devDependencies": {
+    "geckodriver": "^1.4.0",
     "gradle": "^0.1.0",
     "grunt-contrib-less": "~1.4.0",
     "grunt-contrib-watch": "~1.0.0",
-    "less": "~2.7.2"
+    "less": "~2.7.2",
+    "qunitjs": "^2.1.1"
   }
 }
