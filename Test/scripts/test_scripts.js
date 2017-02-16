@@ -16,6 +16,7 @@ var driver = new webdriver.Builder()
     .build();
 
     driver.get('http://localhost:8887');
+    driver.wait(until.elementLocated(By.id('exampleInputName1')), 9000);
     driver.findElement(By.id('exampleInputName1')).sendKeys("Test Name");
     driver.findElement(By.id('exampleInputEmail1')).sendKeys("testName@ftc-llc.com");
     var button = driver.findElement(By.id('submitButton')).click();
